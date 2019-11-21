@@ -1,11 +1,10 @@
 # Travel Agency Tribes API Documentation
 
-# Authenticaton Routes
+## Authenticaton Routes
 
-Login
+#### Login
 
-Http Request
-POST https://api2.gttwl.net/tat_api/v1/login 
+HTTP POST `https://api2.gttwl.net/tat_api/v1/login `
 
 | Method | Route | Parameters | Result |
 | ------ | ------ | ------ | ------ |
@@ -18,13 +17,13 @@ This method accepts a users email address as its only parameter. If the user is 
 
 if the user exists in the system
 
-`{
+```{
   content-type: "json", 
   message: "Please check your email for authentication code",  
   token: "4mmwsosbem", 
   state:"ok", 
   status: 200 
-}`
+}```
 
 Properties
 
@@ -117,11 +116,10 @@ Bad Request(missing parameters):
 
 
 
-# CONTENT ROUTES
+#### CONTENT ROUTES
  
-# Get all Content(completed)
-Http Request
-GET https://api2.gttwl.net/tat_api/v1/contents
+Get all Content(completed)
+Http GET `https://api2.gttwl.net/tat_api/v1/contents`
 
 
 | Method | Route | Parameters | Result |
@@ -144,9 +142,9 @@ Parameters
 
 This Route will accept the apikey for the current user for authentication, A successful request will return a json map with a list of all the content for this agency
 
-We will use pagination in order to divide the content into pages
 
-`
+We will use pagination in order to divide the content into pages
+```
 {
    content-type:"json",
    data:[
@@ -175,7 +173,7 @@ We will use pagination in order to divide the content into pages
            },
    state:"ok",
    status: 200
-}
+}```
 `
 
 Properties
@@ -197,32 +195,27 @@ The following table defines the properties that appear in the response
 | permalink | String, This is the url to view the content on the agency’s website. |
 
 
-
-
 Failed authentication :
-`
+```
 {
    content-type:"json",
    state:"error",
    message: "Failed Authentication, check apikey",
    status: 401
-}`
+}```
 
 General Error :
 
-`{
+```{
    content-type: "json",
    message: "Please try again",
    status:404
-}
-`
+}```
 
 
-# VIEW CONTENT
+#### VIEW CONTENT
 
-Http Request
-GET https://api2.gttwl.net/tat_api/v1/content
-
+HTTP GET https://api2.gttwl.net/tat_api/v1/content
 
 | Method | Route | Parameters | Result |
 | ------ | ------ | ------ | ------ |
@@ -241,7 +234,7 @@ This method returns information on a single piece of content, This route accepts
 
 A successful call will result in a json map with all the data for the post.
 
-`
+```
 {
  content-type:"json",
  data:
@@ -268,7 +261,7 @@ A successful call will result in a json map with all the data for the post.
       },
  state:"ok",
  status: 200
-}`
+}```
 
 
 
@@ -325,10 +318,9 @@ Returns error :
 }`
 
 
-# Unpublish/Publish Content
+#### Unpublish/Publish Content
 
-Http Request(completed)
-POST https://api2.gttwl.net/tat_api/v1/content/unpublish
+Http POST `https://api2.gttwl.net/tat_api/v1/content/unpublish`
 
 
 | Method | Route | Parameters | Result |
@@ -576,7 +568,7 @@ General error :
 
 
 
-# VIEW CUSTOMER
+#### VIEW CUSTOMER
 
 Http Request
 GET https://api2.gttwl.net/tat_api/v1/customer
@@ -677,7 +669,7 @@ User not found error:
    status: 404
 }`
 
-# CREATE CUSTOMER
+#### CREATE CUSTOMER
 
 Http Request 
 POST https://api2.gttwl.net/tat_api/v1/customer
@@ -720,24 +712,24 @@ This route accepts all the required fields to add a user to the system.
 
 Failed authentication error : 
 
-`{
+```{
    content-type:"json",
    state:”error”,
    message: "Failed Authentication",
    status: 401
-}`
+}```
 
 Returns error : 
 
-`{
+```{
    content-type: "json",
    state:"error",
    message: "Please try again",
    status:400
-}`
+}```
 
 
-# VIEW ALL ACTIVITY
+#### VIEW ALL ACTIVITY
 
 Http Request
 https://api2.gttwl.net/tat_api/v1/activities
@@ -760,7 +752,7 @@ Parameters
 
 Route works similarly to /content and /customers route. 
 
-`{
+```{
    content-type: "json",
    activities:[
                 {
@@ -782,7 +774,7 @@ Route works similarly to /content and /customers route.
            },
    state:"ok",
    status: 200
-}`
+}```
 
 
 Properties
@@ -800,30 +792,26 @@ The following table defines the properties that appear in the response
 
 Failed authentication : 
 
-`{
+```{
    content-type:"json",
    state:"error",
    message: "Failed Authentication",
    status: 401
-}`
+}```
 
 Returns error : 
 
-`{
+```{
    content-type: "json",
    state:"error",
    message: "Please try again",
    status:404
-}`
+}```
 
 
 # VIEW ACTIVITY
 
-Http Request
-https://api2.gttwl.net/tat_api/v1/activity
-
-
-
+`https://api2.gttwl.net/tat_api/v1/activity`
 
 | Method | Route | Parameters | Result |
 | ------ | ------ | ------ | ------ |
@@ -838,11 +826,9 @@ Parameters
 | apikey | String, required, This is the api key for the user, this must be used with all api calls |
 
 
-
-
 This route returns the data for an activity
 
-`{
+```{
    content-type:"json",
    activity:{
               zid: "ryj35",
@@ -867,7 +853,7 @@ This route returns the data for an activity
         },
    state:"ok",
    status: 200
-}`
+}```
 
 Properties
 The following table defines the properties that appear in the response
@@ -885,31 +871,32 @@ pos is attached to the activity endpoint returns an empty list |
 
 
 No activity found: 
-`
+
+```
 {
    content-type:"json",
    state:"error",
    message: "Sorry, Activity not found",
    status: 404
-}`
+}```
 
 Failed Authentication Error: 
 
-`{
+```{
    content-type:"json",
    state:"error",
    message: "Failed Authentication",
    status: 401
-}`
+}```
 
 Returns error : 
 
-`{
+```{
    content-type: "json",
    state:"error",
    message: "Please try again",
    status:400
-}`
+}```
 
 
 
@@ -936,7 +923,7 @@ Parameters
 This route returns the current user information and the current settings for the user
 
 
-`{
+```{
    content-type:"json",
    user:{
           zid:"iroshr",
@@ -954,7 +941,7 @@ This route returns the current user information and the current settings for the
             },
    state:"ok",
    status:200
-}`
+}```
 
 
 Properties
@@ -977,28 +964,27 @@ The following table defines the properties that appear in the response
 
 Failed Authentication Error: 
 
-`{
+```{
    content-type:"json",
    state:”error”,
    message: "Failed Authentication",
    status: 401
-}`
+}```
 
 General error : 
 
-`{
+```{
    content-type: "json",
    state:”error”,
    message: "Please try again",
    status:404
-}`
+}```
 
 
 
-# UPDATE SETTINGS
+#### UPDATE SETTINGS
 
-Http Request
-https://api2.gttwl.net/tat_api/v1/settings
+`https://api2.gttwl.net/tat_api/v1/settings`
 
 
 | Method | Route | Parameters | Result |
@@ -1026,32 +1012,32 @@ Parameters
 
 This route allows for updating the user's information and settings.
 
-`{
+```{
    content-type: "json",
    state:"ok",
    message: "Successfully updated user settings",
    status:200
-}`
+}```
 
 Else
 
 Failed Authentication Error: 
 
-`{
+```{
    content-type:"json",
    state:"error",
    message: "Failed Authentication",
    status: 401
-}`
+}```
 
 Returns error : 
 
-`{
+```{
    content-type: "json",
    state:"error",
    message: "Please try again",
    status:400
-}`
+}```
 
 
 
