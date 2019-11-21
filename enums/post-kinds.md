@@ -2,10 +2,11 @@ There are a few different post kinds, you may reference them using the tag "kind
 
 Example:
 
-/content?kind=8
+`/content?kind=8`
 
 Post Kinds and their numbers:
 
+```
   subscription: 405,
   invoice: 305,
   lead: 1,
@@ -48,3 +49,4 @@ Post Kinds and their numbers:
   call: 201,
   newsletter: 205,
   slack_checkboxes: 125
+```
