@@ -1,6 +1,6 @@
-Users (Author)
-===============
+#### Users (Author)
 
+```
 {{id}}
 {{username}}
 {{email}}
@@ -30,18 +30,19 @@ Users (Author)
 {{role}}
 {{role_id}}
 {{attachments}}
+```
 
-Background Photos
-=================
+#### Background Photos
 
+```
 {{background_photo}}
 {{background_photo.url}}
 (has same attributes as photo object}}
+```
 
-Custom Fields
-=============
+#### Custom Fields
 
+```
 {{custom_fields}}
 {{custom_fields.my_custom_field}}
-
-
+```
