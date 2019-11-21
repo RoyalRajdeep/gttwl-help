@@ -1,3 +1,4 @@
+```
 STATUS: PROPOSED
 
 PROBLEM
@@ -22,6 +23,4 @@ Additionally, other tags will be available as well:
 {{approve_url}} - a url so the user can set the post to active
 {{disable_url}} - a url so the user can set the post to be deleted
 {{delete_url}} - a url so the user can delete the post
-
-
-
+```
