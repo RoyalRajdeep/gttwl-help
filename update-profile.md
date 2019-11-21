@@ -29,14 +29,16 @@ User attributes allowed are:
 
 #### Example form
 ---
-`<form method="POST" action="/account">
+```
+<form method="POST" action="/account">
 <label>Email</label>
 <input type="email" name="email" value="{{current_user.email}}" />
 <label>Name</label>
 <input type="text" name="name" value="{{current_user.name}}" />
 ...
 <input type="submit" value="Update Profile" />
-</form>`
+</form>
+```
 
 #### UPDATING USER PHOTOS
 ---
@@ -50,4 +52,5 @@ attachments[]
   <input type="file" name="attachments[]" />
   
   <input type="submit" value="Upload photo" />
-</form>```
+</form>
+```
