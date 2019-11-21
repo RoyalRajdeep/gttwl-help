@@ -1,5 +1,4 @@
 ## UPDATE USER PROFILES & USER PHOTOS
----
 
 To Update a user profile, create a template with a form called "/account".
 Only the current user is allowed to update their profile.
@@ -30,22 +29,21 @@ User attributes allowed are:
 
 #### Example form
 ---
-```<form method="POST" action="/account">
+`<form method="POST" action="/account">
 <label>Email</label>
 <input type="email" name="email" value="{{current_user.email}}" />
 <label>Name</label>
 <input type="text" name="name" value="{{current_user.name}}" />
 ...
 <input type="submit" value="Update Profile" />
-</form>```
+</form>`
 
-
-### UPDATING USER PHOTOS
+#### UPDATING USER PHOTOS
 ---
 You need a separate form to update user templates. It should be named `"/account/photo"`. Only one field is required
 attachments[]
 
-Example Form
+#### Example Form
 ---
 ```<form method="POST" action"/account/photo">
   <label>Upload a new profile photo</label>
