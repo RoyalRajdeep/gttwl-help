@@ -1,35 +1,33 @@
-Tags used in your Layouts and internal templates
-==========
+### Tags used in your Layouts and internal templates
 
-Agency Tags:
-------------
+#### Agency
 {{agency}}
 {{agency.name}}
 {{agency.cname}}
 etc...
 
-To Include Content:
+#### To Include Content:
 -------------------
 {{content_for_layout}}
 
-Meta Information
+#### Meta Information
 ----------------
 {{meta_title}}
 {{meta_description}}
 {{meta_keywords}}
 
-Custom HTMl Header Info
+#### Custom HTMl Header Info
 -----------------------
 {{html_header}}
 
-Miscellenous:
+#### Miscellenous:
 -------------
 {{year}} * eg: "2013"
 {{csrf}} * Include this in all forms with a POST method
 {{ip_address}} -- IP Address of thte visitor
 {{params}} -- any params in the URL. eg: http://yoursite.com?greeting=hello would be {{params.greeting}}
 
-Env Variables
+#### Env Variables
 -------------
 {{env.server_software}}
 {{env.server_name}}
@@ -57,7 +55,7 @@ Env Variables
 {{env.original_fullpath}}
 {{env.current_url}}
 
-Menu System
+#### Menu System
 -----------
 {{menu}} - A simple menu system like this:
 It's an array of arrays, eg:
@@ -73,7 +71,7 @@ It's an array of arrays, eg:
 {% endfor %}
 </ul>
 
-Currently Logged In User
+#### Currently Logged In User
 ------------------------
 {{current_user}}
 {{current_user.name}}
