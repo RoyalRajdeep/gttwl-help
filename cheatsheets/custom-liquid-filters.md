@@ -1,4 +1,4 @@
-Additional Liquid Filters for GTTWL
+#### Additional Liquid Filters for GTTWL
 -----------------------------------
 
 money - converts to currency {{9.99 | money }} => "$9.99"
@@ -12,5 +12,4 @@ titleize - Makes all words capitalized in a string. Eg: "this is good" => "This 
 
 Let us know if you need additional filters.
 
-Standard Liquid Filters are here:
-https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
+Standard Liquid Filters are here: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
