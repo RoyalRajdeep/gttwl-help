@@ -23,7 +23,8 @@ if the user exists in the system
   token: "4mmwsosbem", 
   state:"ok", 
   status: 200 
-}```
+}
+```
 
 Properties
 
@@ -36,14 +37,14 @@ The following table defines the properties that appear in the response
 
 Error messages
 
-``{
+```
+{
     content-type: "json",
     state:"error",
     message:"invalid request",
     status:400
-}``
-
-
+}
+```
 
 # Email Validation
 POST https://api2.gttwl.net/tat_api/v1/code
@@ -63,7 +64,7 @@ This route accepts the authentication code sent to the user via email.
 
 Upon successful authentication returns a "json" map with list of agencies that user is associated with:
 
-` {
+``` {
    content-type: "json",
    data:[
           {
@@ -77,8 +78,7 @@ Upon successful authentication returns a "json" map with list of agencies that u
    state:"ok",
    Status:200
 }
-`
-
+```
 
 Properties
 The following table defines the properties that appear in the response
@@ -144,6 +144,7 @@ This Route will accept the apikey for the current user for authentication, A suc
 
 
 We will use pagination in order to divide the content into pages
+
 ```
 {
    content-type:"json",
@@ -173,8 +174,8 @@ We will use pagination in order to divide the content into pages
            },
    state:"ok",
    status: 200
-}```
-`
+}
+```
 
 Properties
 The following table defines the properties that appear in the response
@@ -210,7 +211,8 @@ General Error :
    content-type: "json",
    message: "Please try again",
    status:404
-}```
+}
+```
 
 
 #### VIEW CONTENT
@@ -261,7 +263,8 @@ A successful call will result in a json map with all the data for the post.
       },
  state:"ok",
  status: 200
-}```
+}
+```
 
 
 
@@ -717,7 +720,8 @@ Failed authentication error :
    state:”error”,
    message: "Failed Authentication",
    status: 401
-}```
+}
+```
 
 Returns error : 
 
@@ -726,7 +730,8 @@ Returns error :
    state:"error",
    message: "Please try again",
    status:400
-}```
+}
+```
 
 
 #### VIEW ALL ACTIVITY
@@ -774,7 +779,8 @@ Route works similarly to /content and /customers route.
            },
    state:"ok",
    status: 200
-}```
+}
+```
 
 
 Properties
@@ -792,21 +798,25 @@ The following table defines the properties that appear in the response
 
 Failed authentication : 
 
-```{
+```
+{
    content-type:"json",
    state:"error",
    message: "Failed Authentication",
    status: 401
-}```
+}
+```
 
 Returns error : 
 
-```{
+```
+{
    content-type: "json",
    state:"error",
    message: "Please try again",
    status:404
-}```
+}
+```
 
 
 # VIEW ACTIVITY
@@ -828,7 +838,8 @@ Parameters
 
 This route returns the data for an activity
 
-```{
+```
+{
    content-type:"json",
    activity:{
               zid: "ryj35",
@@ -853,7 +864,8 @@ This route returns the data for an activity
         },
    state:"ok",
    status: 200
-}```
+}
+```
 
 Properties
 The following table defines the properties that appear in the response
@@ -878,7 +890,8 @@ No activity found:
    state:"error",
    message: "Sorry, Activity not found",
    status: 404
-}```
+}
+```
 
 Failed Authentication Error: 
 
@@ -887,17 +900,19 @@ Failed Authentication Error:
    state:"error",
    message: "Failed Authentication",
    status: 401
-}```
+}
+```
 
 Returns error : 
 
-```{
+```
+{
    content-type: "json",
    state:"error",
    message: "Please try again",
    status:400
-}```
-
+}
+```
 
 
 # SETTINGS ROUTES
@@ -941,7 +956,8 @@ This route returns the current user information and the current settings for the
             },
    state:"ok",
    status:200
-}```
+}
+```
 
 
 Properties
@@ -969,7 +985,8 @@ Failed Authentication Error:
    state:”error”,
    message: "Failed Authentication",
    status: 401
-}```
+}
+```
 
 General error : 
 
@@ -978,7 +995,8 @@ General error :
    state:”error”,
    message: "Please try again",
    status:404
-}```
+}
+```
 
 
 
@@ -1017,7 +1035,8 @@ This route allows for updating the user's information and settings.
    state:"ok",
    message: "Successfully updated user settings",
    status:200
-}```
+}
+```
 
 Else
 
@@ -1028,7 +1047,8 @@ Failed Authentication Error:
    state:"error",
    message: "Failed Authentication",
    status: 401
-}```
+}
+```
 
 Returns error : 
 
@@ -1037,7 +1057,8 @@ Returns error :
    state:"error",
    message: "Please try again",
    status:400
-}```
+}
+```
 
 
 
