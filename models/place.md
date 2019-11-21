@@ -1,6 +1,4 @@
-Places
-=======
-
+```
 {{id}}
 {{kind}}
 {{title}}
@@ -23,3 +21,4 @@ Places
 {{feature_code}}
 {{photo}}
 {{attachments}}
+```
