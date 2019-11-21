@@ -1,10 +1,10 @@
-Agency Tags
-=========
+## Agency Tags
 
-For example:
-{{agency.cname}}
+For Example:
 
-{{id}}
+`{{agency.cname}}`
+
+```{{id}}
 {{domain}}
 {{cname}}
 {{name}}
@@ -51,3 +51,4 @@ For example:
 {{kind}}
 {{redirect}}
 {{favicon}}
+```
